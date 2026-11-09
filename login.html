@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- DOCTYPE: avisa ao navegador que esta página é HTML5. Sempre a 1ª linha. -->
+<html lang="pt-br">
+<!-- lang="pt-br": o conteúdo está em português. -->
+
+<head>
+    <!-- HEAD: configurações da página. -->
+    <meta charset="UTF-8">
+    <!-- UTF-8: permite utilizar acentos e caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página se adaptar à tela do celular. -->
+
+    <title>Login — Sistema Musical</title>
+    <!-- Nome que aparece na aba do navegador. -->
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🎵</text></svg>">
+
+    <!-- Conecta o arquivo CSS utilizado em todas as telas. -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- Centraliza o cartão de login na tela. -->
+<body class="login-page">
+
+    <!-- Caixa branca que contém o formulário de login. -->
+    <div class="login-card">
+
+        <!-- Título e subtítulo do login. -->
+        <div class="login-header">
+            <h1>🎵 Sistema Musical</h1>
+            <p>Entre com suas credenciais</p>
+        </div>
+
+        <!-- Formulário de login.
+             method="post": envia os dados no corpo da requisição.
+             action="#": ainda não envia os dados para um sistema PHP. -->
+        <form method="post" action="#">
+
+            <!-- Campo de usuário. -->
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    required
+                    autocomplete="username"
+                    placeholder="Seu usuário"
+                >
+            </div>
+
+            <!-- Campo de senha. -->
+            <div class="form-group">
+                <label for="senha">Senha</label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    required
+                    autocomplete="current-password"
+                    placeholder="Sua senha"
+                >
+            </div>
+
+            <!-- Botão para enviar o formulário. -->
+            <button type="submit" class="btn-primary">
+                Entrar
+            </button>
+
+        </form>
+
+        <!-- Credenciais de teste. -->
+        <div class="login-hint">
+            <strong>Credenciais de teste:</strong><br>
+            Usuário: <code>admin</code> &nbsp;·&nbsp;
+            Senha: <code>123</code>
+        </div>
+
+    </div>
+
+</body>
+</html>
